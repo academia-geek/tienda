@@ -1,6 +1,6 @@
 import React from 'react';
-import Producto from './components/producto';
-import Vendedor from './components/vendedor';
+import Producto from './components/class_component/Producto';
+import Vendedor from './components/func_component/vendedor';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
