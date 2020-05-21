@@ -4,10 +4,18 @@ import proptype from 'prop-types';
 class Producto extends Component{
 	constructor(){
         super();
+        this.imgRutas  = [
+            "https://pbs.twimg.com/profile_images/1080594463901302786/RNz9UfNE_400x400.jpg", 
+            "https://pbs.twimg.com/profile_images/1090461004792774657/a8S_zZum_400x400.jpg", 
+            "https://pbs.twimg.com/profile_images/1198039283073998848/ZYAODVwz.jpg", 
+            "https://as00.epimg.net/img/comunes/fotos/fichas/equipos/large/3850.png"
+        ];
+        
         this.state = {
             codigo : "A000", 
             precio : 100, 
-            parimpar : ""
+            parimpar : "", 
+            imagenEquipoAnt : "https://i.pinimg.com/originals/e2/29/0a/e2290a9c1b88818cab6ed0a304a82b5f.jpg"
         }
         this.contador = 0;
     }
