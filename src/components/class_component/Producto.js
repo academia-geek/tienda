@@ -5,17 +5,24 @@ class Producto extends Component{
 	constructor(){
         super();
         this.state = {
-            codigo : "0000"
+            codigo : "A000", 
+            precio : 100
         }
+        this.contador = 0;
     }
     
-    handleCambioCodigo(e){
-        console.log("Se realizo el cambio");
+    handleCambioCodigo = (e) => {
+        this.contador++;
+        this.setState({codigo: `A00${this.contador}`, precio : (this.state.precio + this.contador)});
+        
     }
     
     render(){
         const {referencia} = this.props;
-        console.log(this);
+        const {codigo,precio} = this.state;
+        console.log("============")
+        console.log(this.state);
+        console.log("============")
         return(
             <section className = "card bg-success">
             <div className="card-header">
@@ -24,10 +31,10 @@ class Producto extends Component{
             <div className="card-body">
                 <div className = "row">
                     <div className = "col-lg-6 col-6">Referencia:{referencia}</div>
-                    <div className = "col-lg-6 col-6">Código: {this.state.codigo}</div>
+                    <div className = "col-lg-6 col-6">Código: {codigo}</div>
                 </div>
                 <div className = "row">
-                    <div className = "col-lg-6 col-6">Precio: </div>
+                    <div className = "col-lg-6 col-6">Precio: {precio}</div>
                     <div className = "col-lg-6 col-6">Importado: </div>
                 </div>
                 <div className = "row">
