@@ -36,7 +36,11 @@ class Producto extends Component{
     }
     
     handleCambioEscudoEquipo = (e) => {
-        console.log("Cambios");
+        const max = 3;
+        const min = 0;
+        let p = Math.round(Math.random() * (max - min) + min);
+        console.log(p);
+        this.setState({imagenEquipoAnt:this.imgRutas[p]});
     }
     
     render(){
