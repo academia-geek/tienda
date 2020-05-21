@@ -4,7 +4,7 @@ import proptype from 'prop-types';
 class Producto extends Component{
 	constructor(){
         super();
-        this.imgRutas  = [
+        this.imgRutas = [
             "https://pbs.twimg.com/profile_images/1080594463901302786/RNz9UfNE_400x400.jpg", 
             "https://pbs.twimg.com/profile_images/1090461004792774657/a8S_zZum_400x400.jpg", 
             "https://pbs.twimg.com/profile_images/1198039283073998848/ZYAODVwz.jpg", 
