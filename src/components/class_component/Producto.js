@@ -35,6 +35,10 @@ class Producto extends Component{
         }
     }
     
+    handleCambioEscudoEquipo = (e) => {
+        console.log("Cambios");
+    }
+    
     render(){
         const {referencia} = this.props;
         const {codigo,precio, parimpar} = this.state;
@@ -68,6 +72,14 @@ class Producto extends Component{
                                 {parimpar}
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className = "row">
+                    <div className = "col-lg-12 col-12 text-center">
+                        <button className = "btn btn-primary" onClick={this.handleCambioEscudoEquipo}>Cambiar Escudo</button>
+                    </div>
+                    <div className = "col-lg-12 col-12 text-center">
+                        <img src = {this.state.imagenEquipoAnt} width = "400"/>
                     </div>
                 </div>
             </div>
